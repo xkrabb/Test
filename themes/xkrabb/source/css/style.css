@@ -1,0 +1,104 @@
+html,
+body {
+    height: 100%;
+    font-size: 20px;
+    font-family: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url(../images/bg.jpg);
+}
+
+.top-header {
+    widows: 100%;
+    background-color: rgba(0,0,0,.25);
+    box-shadow: 0 2px 2px #666;
+    
+}
+.top-nav {
+    background-color: transparent;
+    border: 0;  
+    color: #fff;
+    width: 80%;
+    margin: 0 auto;
+}
+.navbar-brand {
+    padding: 10px;
+}
+h4 {
+    display: inline-block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 0.8rem;
+    margin: 0;
+}
+
+.search-btn {
+    position: relative;
+    display: inline-block;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    right: 0;
+}
+.search-btn i {
+    position: relative;
+    font-size: 0.7rem;
+    top: 0.15rem;
+}
+
+.search-btn input {
+    color: #eee;
+    height: 1.2rem;
+    font-size: 0.6rem;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 1.5rem;
+    transition: width 1s;
+}
+
+.search-btn input:focus {
+    border-bottom: 1px solid #fff;
+    width: 5rem;
+}
+
+.share-btn {
+    display: inline-block;
+    float: right;
+    font-size: 0.7rem;
+    height: 3rem;
+    line-height: 3rem;
+}
+
+
+.footer-bttom {
+    font-size: 0.6rem;
+    text-align: right;
+    margin: 0 auto;
+    width: 100%;
+    background-color: rgba(0,0,0,0.25);
+    position: fixed;
+    bottom: 0;
+    color: #fff;
+}
+p {
+    height: 2rem;
+    line-height: 2rem;
+    display: inline-block;
+    margin: 0;
+    margin-right: 10%;
+}
+a {
+    color: green;
+}
+
+/* silder start */
+.left-slider {
+    height: 10rem;
+    width: 10rem;
+    background-color: rgba(0,0,0,.25);
+}
+/* silder end */
+

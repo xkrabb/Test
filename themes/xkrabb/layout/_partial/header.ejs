@@ -1,0 +1,28 @@
+<header class="top-header">
+    <nav class="navbar navbar-default top-nav">
+        <%
+            if(is_home()) {
+                title = config.title;
+            } else {
+                title = page.title;
+            }
+        %>
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img alt="Brand" src="/images/logo.png" width="40" height="30">
+                </a>
+                <h4 class="content-title"><%= title %></h4>
+                <% if(theme.search && is_home()) { %>
+                <div class="search-btn">
+                    <i class="glyphicon glyphicon-search"></i>
+                    <input type="text" placeholder="搜索">
+                </div>  
+                <% } %>          
+                <% if(theme.share && is_post()) { %>
+                    <div class="share-btn">分享</div>
+                <% } %>
+            </div>
+        </div>
+    </nav>
+</header>

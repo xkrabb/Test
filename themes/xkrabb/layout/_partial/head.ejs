@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <%
+    var title = [];
+    if (is_archive()){
+        title.push(__(archive));
+    if (is_month()){
+        title.push(': ' + page.year + '/' + page.month);
+    } else if (is_year()){
+        title.push(': ' + page.year);
+    }
+    } else if (is_category()){
+        title.push(__(category)+ ': ' + page.category);
+    } else if (is_tag()){
+        title.push(__(tag)+ ': ' +page.tag);
+    } else if(is_home()) {
+        title.push(config.title);
+        title.push(config.subtitle);
+    } else {
+        title.push(config.title);
+    }
+    // console.log(page);
+    var description = page.description || page.excerpt || truncate(strip_html(page.content ||'网站首页描述'), {length: 150});
+    %>
+    <title><%= title.join(' | ')%></title>
+    <meta name="description" content="<%= description %>">
+    <% if (page.keywords){ %>
+        <meta name="keywords" content="<%= page.keywords %>">
+    <% } %>
+
+    <meta property="og:site_name" content="<%= config.title %>"/>
+    <% if(page.cover) { %>
+        <meta property="og:image" content="<%= page.cover %>" />
+    <% } else { %>
+        <meta property="og:image" content="<%= config.cover %>"/>
+    <% } %>
+    <%- favicon_tag('css/favicon.icon') %>
+    <%- css(theme.style) %>
+    <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="/`/cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
