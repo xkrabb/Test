@@ -11,12 +11,14 @@ git基本上都是本地操作，三种文件状态关系见图示：（Git 的�
 `/etc/gitconfig `文件：系统中对所有用户都普遍适用的配置。若使用` git config` 时用 `--system` 选项，读写的就是这个文件。
 `~/.gitconfig `文件：用户目录下的配置文件只适用于该用户。若使用 `git config` 时用` --global `选项，读写的就是这个文件。
 当前项目的 Git 目录中的配置文件（` .git/config `）。这里的配置仅仅针对当前项目有效。
->下面 的配置将会覆盖上面的配置，查看配置：`git  config --list`。
-获取帮助：`git help` ，例如：`git help config`会用默认浏览器打开说明。还可以寻求[网上帮助](irc.freenode.net)。
 
 <!-- more -->
 
 ---------------
+
+>下面 的配置将会覆盖上面的配置，查看配置：`git  config --list`。
+获取帮助：`git help` ，例如：`git help config`会用默认浏览器打开说明。还可以寻求[网上帮助](irc.freenode.net)。
+
 <br>
 
 #### 2，git基础：
