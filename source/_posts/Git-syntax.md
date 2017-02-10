@@ -14,7 +14,6 @@ git基本上都是本地操作，三种文件状态关系见图示：（Git 的�
 
 <!-- more -->
 
----------------
 
 >下面 的配置将会覆盖上面的配置，查看配置：`git  config --list`。
 获取帮助：`git help` ，例如：`git help config`会用默认浏览器打开说明。还可以寻求[网上帮助](irc.freenode.net)。
